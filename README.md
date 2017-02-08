@@ -1,2 +1,2 @@
-# transactional-file-management
+# Transactica
 Work with the file system transactionally
