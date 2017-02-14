@@ -40,17 +40,14 @@ class FileManager
         $ri = new \RecursiveIteratorIterator($di, \RecursiveIteratorIterator::CHILD_FIRST);
 
         foreach ($ri as $file) {
-            echo '> removing file in dir: ' . $file . PHP_EOL;
             $file->isDir() ?  rmdir($file) : unlink($file);
         }
 
-        echo '> removing parent dir: ' . $dir . PHP_EOL;
         rmdir($dir);
     }
 
     protected function forceRemoveFile($file)
     {
-        echo '> removing file: ' . $file . PHP_EOL;
         unlink($file);
     }
 }
