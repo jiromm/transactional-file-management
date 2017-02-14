@@ -25,7 +25,7 @@ try {
     }
 
     $transactica->getFileManager()->remove(__DIR__ . '/data/tempdir2');
-//    throw new \Exception('break it down');
+    throw new \Exception('break it down');
 
     $transactica->commitTransaction();
     echo 'commited 1' . PHP_EOL;
